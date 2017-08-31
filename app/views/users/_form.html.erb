@@ -1,33 +1,33 @@
-<%= form_for(user) do |f| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="row">
+  <%= form_for(user) do |f| %>
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="actions">
+
+      <a class="waves-effect waves-light btn-large"><%= f.submit %></a>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-
-  <div class="actions">
-
-    <a class="waves-effect waves-light btn-large"><%= f.submit %></a>
-  </div>
-<% end %>
-<%= link_to 'Back', users_path, class: "waves-effect waves-light btn-large" %>
-<%= link_to 'Destroy', @user, method: :delete,
-  data: { confirm: 'Are you sure?' },
-  class: "waves-effect waves-light btn-large"
-%>
+</div>
+<div class="row">
+  <%= link_to 'Back', users_path, class: "waves-effect waves-light btn-large" %>
+</div>

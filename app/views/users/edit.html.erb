@@ -1,3 +1,9 @@
 <h1>Editing User</h1>
 
 <%= render 'form', user: @user %>
+<div class="row">
+  <%= link_to 'Destroy', @user, method: :delete,
+    data: { confirm: 'Are you sure?' },
+    class: "waves-effect waves-light btn-large"
+  %>
+</div>
