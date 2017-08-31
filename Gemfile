@@ -25,6 +25,7 @@ gem 'material_icons'
 group :development, :test do
   gem 'pry-byebug'
   gem 'byebug', platform: :mri
+  gem 'faker'
 end
 
 group :development do
