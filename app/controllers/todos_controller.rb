@@ -1,5 +1,10 @@
 class TodosController < ApplicationController
+  before_action :current_user
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
+
+  def current_user
+    @current_user ||= User.find(params['user_id'])
+  end
 
   # GET /todos
   # GET /todos.json

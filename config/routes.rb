@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :todos
+
   root 'welcome#index'
-  resources :users
+  resources :users do
+    resources :todos
+  end
 end

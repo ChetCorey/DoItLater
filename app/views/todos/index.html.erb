@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @current_user.name %></h1>
 <h1>Todos</h1>
 
 <table>
@@ -19,7 +20,7 @@
         <td><%= todo.deration %></td>
         <td><%= todo.user %></td>
         <td><%= link_to 'Show', todo %></td>
-        <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+        <td><%= link_to 'Edit', edit_user_todo_path(todo) %></td>
         <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -28,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Todo', new_todo_path %>
+<%= link_to 'New Todo', new_user_todo_path %>
