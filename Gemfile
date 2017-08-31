@@ -18,6 +18,10 @@ gem 'jbuilder', '~> 2.5'
 # Security
 gem 'dotenv'
 
+# Style
+gem 'materialize-sass'
+gem 'material_icons'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'byebug', platform: :mri

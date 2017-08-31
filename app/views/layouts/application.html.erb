@@ -6,9 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">DoItLater</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li> <%= link_to 'User', users_path %></li>
+          <li> <%= link_to 'New', new_user_path %></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

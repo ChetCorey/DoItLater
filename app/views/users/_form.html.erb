@@ -22,6 +22,12 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+
+    <a class="waves-effect waves-light btn-large"><%= f.submit %></a>
   </div>
 <% end %>
+<%= link_to 'Back', users_path, class: "waves-effect waves-light btn-large" %>
+<%= link_to 'Destroy', @user, method: :delete,
+  data: { confirm: 'Are you sure?' },
+  class: "waves-effect waves-light btn-large"
+%>
